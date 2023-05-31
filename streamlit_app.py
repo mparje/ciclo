@@ -2,13 +2,12 @@ import streamlit as st
 import numpy as np
 import matplotlib.pyplot as plt
 
-
 # Función para simular el ciclo económico basado en la teoría austriaca
 def simulate_austrian_business_cycle(amplitude, frequency, phase, time):
     return amplitude * np.sin(frequency * time + phase)
 
-
 # Configuración de la aplicación Streamlit
+st.set_page_config(layout="wide")
 st.title("Simulador del Ciclo Económico Austriaco")
 
 # Configuración de las columnas en Streamlit
@@ -20,13 +19,13 @@ with col1:
     st.markdown("""
         Esta aplicación simula el ciclo económico austriaco, basado en la teoría de los ciclos económicos de la Escuela Austriaca.
 
-        - **Amplitud:** Representa las fluctuaciones máximas en el nivel económico durante el ciclo. Un valor alto indica oscilaciones más pronunciadas, mientras que un valor bajo indica oscilaciones más suaves.
+        **Amplitud:** Representa las fluctuaciones máximas en el nivel económico durante el ciclo. Un valor alto indica oscilaciones más pronunciadas, mientras que un valor bajo indica oscilaciones más suaves.
 
-        - **Frecuencia:** Determina la duración promedio de una fase completa del ciclo económico. Una frecuencia alta implica fases más cortas y frecuentes, mientras que una frecuencia baja indica fases más largas y menos frecuentes.
+        **Frecuencia:** Determina la duración promedio de una fase completa del ciclo económico. Una frecuencia alta implica fases más cortas y frecuentes, mientras que una frecuencia baja indica fases más largas y menos frecuentes.
 
-        - **Fase:** Controla el desplazamiento horizontal del ciclo económico. Modificar este valor cambia el punto de partida del ciclo económico en el tiempo.
+        **Fase:** Controla el desplazamiento horizontal del ciclo económico. Modificar este valor cambia el punto de partida del ciclo económico en el tiempo.
 
-        La teoría austriaca sostiene que los ciclos económicos son el resultado de desequilibrios en la economía causados por intervenciones externas, como políticas monetarias expansivas o inversiones mal dirigidas. Estos desequilibrios generan excesos de inversión y gastos en un primer momento, creando una expansión económica artificial. Sin embargo, esta expansión no es sostenible y eventualmente lleva a una fase de corrección y recesión, en la cual se ajustan los errores y se reestablece el equilibrio económico.
+        La teoría austriaca sostiene que los ciclos económicos son el resultado de desequilibrios en la economía causados por intervenciones externas, como políticas monetarias expansivas o inversiones mal dirigidas. Estos desequilibrios generan excesos de inversión y gastos en un primer momento, creando una expansión económica artificial. Sin embargo, esta expansión no es sostenible y eventualmente lleva a una fase de corrección y recesión, en la cual se ajustan los errores y se restablece el equilibrio económico.
     """)
 
 # Controles deslizantes en la columna derecha
@@ -50,3 +49,6 @@ ax.grid(True)
 
 # Mostrar el gráfico utilizando Streamlit
 st.pyplot(fig)
+
+# Mostrar el mensaje de autoría
+st.sidebar.markdown("Hecho por Moris Polanco, con ayuda de GPT-4")
