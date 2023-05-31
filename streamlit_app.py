@@ -17,8 +17,7 @@ col1, col2 = st.columns([2, 1])
 with col1:
     st.header("Parámetros del Ciclo Económico Austriaco")
     st.markdown("""
-        Esta aplicación simula el ciclo económico austriaco, basado en la teoría de los ciclos económicos de la Escuela Austriaca.
-
+        
         **Amplitud:** Representa las fluctuaciones máximas en el nivel económico durante el ciclo. Un valor alto indica oscilaciones más pronunciadas, mientras que un valor bajo indica oscilaciones más suaves.
 
         **Frecuencia:** Determina la duración promedio de una fase completa del ciclo económico. Una frecuencia alta implica fases más cortas y frecuentes, mientras que una frecuencia baja indica fases más largas y menos frecuentes.
