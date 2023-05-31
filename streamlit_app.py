@@ -15,8 +15,10 @@ col1, col2 = st.columns([2, 1])
 
 # Parámetros del ciclo económico
 with col1:
-    st.header("Parámetros del Ciclo Económico Austriaco")
+    
     st.markdown("""
+    
+        *Parámetros del Ciclo Económico Austriaco*
         
         **Amplitud:** Representa las fluctuaciones máximas en el nivel económico durante el ciclo. Un valor alto indica oscilaciones más pronunciadas, mientras que un valor bajo indica oscilaciones más suaves.
 
